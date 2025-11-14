@@ -26,11 +26,49 @@ export const SuperheroForm = () => {
   const [powers, setPowers] = useState([]);
 
   const handlePowersChange = (e) => {
+    //console.log(e.target);
+    //let value, checked, rest;
+    //let value, checked;
   //const [value, checked] = [e.target.current.value, e.target.current.checked];
-  const [value, checked] = [e.target.value, e.target.checked];
+  //const [value, checked] = [e.target.value, e.target.checked];
+  //[value, checked] = [e.target.value, e.target.checked];
+  //[value, checked] = [e.target.value, e.target.checked];
+  //return setPowers([{value: checked}]);
+  //const [value, checked] = [e.target.value, e.target.checked];
+  //return ({value, checked} = {value: e.target.value, checked: e.target.checked});
+
+    console.log(e.target.value);
+    console.log(e.target.checked);
+  //return [value, checked];
+  //const value = e.target.value;
+  //const checked = e.target.checked; 
+  //let [value, checked] = [e.target.value, e.target.checked];
+  //e.target.value, e.target.checked;
+  //return [e.target.value, e.target.checked];
+  //const [value, checked] = [value.e.target, checked.e.target];
+  //const [value, c] = [e.target, e.target];
+  //setPowers(e.target);
+  //setPowers([e.target.value, e.target.checked]);
+  //setPowers({value: e.target.value, checked: e.target.checked});
+  //return setPowers({value: e.target.value, checked: e.target.checked});
+  //return setPowers([{e.target.value: e.target.checked}]);
+  //setPowers([{e.target.value: e.target.checked}]);
+  //return setPowers([{value: e.target.value, checked: e.target.checked}]);
+  //return setPowers([e.target.value, e.target.checked]);
+  //return setPowers([e.target.value]);
   //const {value, checked} = {e.target.current.value, e.target.current.checked];
+  //const {value: checked} = {e.target.value: e.target.checked};
     //const {value, checked} = e.target;
-    // const {value, checked} = e.target.current;
+    //const {value, checked} = e.target.current;
+    //const [value, checked] = e.target.current;
+    //const [value, checked] = e.target;
+    //const {e.target.value, e.target.checked} = e.target;
+    //const [(e.target.value), (e.target.checked)] = e.target;
+    //const [value, checked] = e.target;
+    //const {(e.target.value), (e.target.checked)} = e.target;
+    //const {(e.target.value): (e.target.checked)} = e.target;
+    //const {value: checked} = e.target;
+    const {value, checked} = e.target;
   }
 
   return (

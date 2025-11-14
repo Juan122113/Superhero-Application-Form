@@ -47,6 +47,8 @@ export const SuperheroForm = () => {
   //return [e.target.value, e.target.checked];
   //const [value, checked] = [value.e.target, checked.e.target];
   //const [value, c] = [e.target, e.target];
+  //const [value, checked] = e.target;
+  //return [value, checked];
   //setPowers(e.target);
   //setPowers([e.target.value, e.target.checked]);
   //setPowers({value: e.target.value, checked: e.target.checked});
@@ -58,18 +60,40 @@ export const SuperheroForm = () => {
   //return setPowers([e.target.value]);
   //const {value, checked} = {e.target.current.value, e.target.current.checked];
   //const {value: checked} = {e.target.value: e.target.checked};
-    //const {value, checked} = e.target;
+    
+    const {value, checked} = e.target;
+
+    //const {e.target.value, e.target.checked} = e.target;
+    //let {value, checked} = e.target;
+    //const { {value, checked} } = e.target;
+    //const ({ value, checked }) = e.target;
+    //const { checked, value } = e.target;
+    //let { value, checked } = e.target;
+    //const [, , { value, checked }] = e.target;
+    console.log(value, checked);
+    console.log(e.target.value, e.target.checked);
+    console.log({value, checked});
+    console.log(typeof e.target);
+    //return value, checked;
+    //return {value, checked};
+    //return ({value, checked});
+    //return setPowers({value, checked});
+    //setPowers({value, checked});
+    //setPowers(({value, checked}));
+    //return setPowers(({value, checked}));
+    //setPowers({{value, checked}});
     //const {value, checked} = e.target.current;
     //const [value, checked] = e.target.current;
     //const [value, checked] = e.target;
     //const {e.target.value, e.target.checked} = e.target;
     //const [(e.target.value), (e.target.checked)] = e.target;
     //const [value, checked] = e.target;
+    //return [value, checked];
     //const {(e.target.value), (e.target.checked)} = e.target;
     //const {(e.target.value): (e.target.checked)} = e.target;
     //const {value: checked} = e.target;
-    const {value, checked} = e.target;
-  }
+    //const {value, checked} = e.target;
+  };
 
   return (
     <div className='form-wrap'>

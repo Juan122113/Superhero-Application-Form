@@ -25,112 +25,16 @@ export const SuperheroForm = () => {
   const [powerSource, setPowerSource] = useState('');
   const [powers, setPowers] = useState([]);
 
-  const handlePowersChange = (e) => {
-    //console.log(e.target);
-    //let value, checked, rest;
-    //let value, checked;
-  //const [value, checked] = [e.target.current.value, e.target.current.checked];
-  //const [value, checked] = [e.target.value, e.target.checked];
-  //[value, checked] = [e.target.value, e.target.checked];
-  //[value, checked] = [e.target.value, e.target.checked];
-  //return setPowers([{value: checked}]);
-  //const [value, checked] = [e.target.value, e.target.checked];
-  //return ({value, checked} = {value: e.target.value, checked: e.target.checked});
-
-    console.log(e.target.value);
-    console.log(e.target.checked);
-  //return [value, checked];
-  //const value = e.target.value;
-  //const checked = e.target.checked; 
-  //let [value, checked] = [e.target.value, e.target.checked];
-  //e.target.value, e.target.checked;
-  //return [e.target.value, e.target.checked];
-  //const [value, checked] = [value.e.target, checked.e.target];
-  //const [value, c] = [e.target, e.target];
-  //const [value, checked] = e.target;
-  //return [value, checked];
-  //setPowers(e.target);
-  //setPowers([e.target.value, e.target.checked]);
-  //setPowers({value: e.target.value, checked: e.target.checked});
-  //return setPowers({value: e.target.value, checked: e.target.checked});
-  //return setPowers([{e.target.value: e.target.checked}]);
-  //setPowers([{e.target.value: e.target.checked}]);
-  //return setPowers([{value: e.target.value, checked: e.target.checked}]);
-  //return setPowers([e.target.value, e.target.checked]);
-  //return setPowers([e.target.value]);
-  //const {value, checked} = {e.target.current.value, e.target.current.checked];
-  //const {value: checked} = {e.target.value: e.target.checked};
-    
-    //const {value, checked} = e.target;
-    
-    //const {value, checked} = (e.target);
-    //let value, checked, rest;
-    //const value, checked, rest;
-    //({value, checked} = e.target);
-    //return ({value, checked} = e.target;
-    //return {value, checked};
-    const value = e.target;
-    const checked = e.target;
-    //let value = e.target;
-    //let checked = e.target;
-    //return {value, checked};
-    //return [value, checked];
-    //setPowers[value, checked];
-    //setPowers([value, checked]);
-    //setPowers(value, checked);
-    //setPowers({value, checked});
-    //setPowers({value: checked});
-    //setPowers([{value: checked}]);
-    //return setPowers([{value: checked}]);
-    //return setPowers({value: checked});
-    //return setPowers({value, checked});
-    //return setPowers(value, checked);
-    //return setPowers([value, checked]);
-    //return setPowers[value, checked];
-    //return {value: value, checked: checked};
-    //setPowers(value: value, checked: checked);
-    //return setPowers([{value: value, checked: checked}]);
-    //return {value: checked};
-    //const {val, check} = e.target;
-    //let {value, checked} = e.target;
-    //const {value, checked} = e.target.current;
-    //const {e.target.value, e.target.checked} = e.target;
-    //let {value, checked} = e.target;
-    //const { {value, checked} } = e.target;
-    //const ({ value, checked }) = e.target;
-    //const { checked, value } = e.target;
-    //let { value, checked } = e.target;
-    //const [, , { value, checked }] = e.target;
-    console.log(value, checked);
-    console.log(e.target.value, e.target.checked);
-    console.log({value, checked});
-    console.log(typeof e.target);
-    //return value, checked;
-    //return {value, checked};
-    //return ({value, checked});
-    //return setPowers({value, checked});
-    //setPowers({value, checked});
-    //setPowers(({value, checked}));
-    //return setPowers(({value, checked}));
-    //setPowers({{value, checked}});
-    //const {value, checked} = e.target.current;
-    //const [value, checked] = e.target.current;
-    //const [value, checked] = e.target;
-    //const {e.target.value, e.target.checked} = e.target;
-    //const [(e.target.value), (e.target.checked)] = e.target;
-    //const [value, checked] = e.target;
-    //return [value, checked];
-    //const {(e.target.value), (e.target.checked)} = e.target;
-    //const {(e.target.value): (e.target.checked)} = e.target;
-    //const {value: checked} = e.target;
-    //const {value, checked} = e.target;
-  };
+  const handlePowersChange = e => {
+    const { value, checked } = e.target;
+    setPowers(checked ? [...powers, value] : powers.filter(p => p !== value));
+  }
 
   return (
     <div className='form-wrap'>
       <h2>Superhero Application Form</h2>
       <p>Please complete all fields</p>
-      <form>
+       <form method='post' action='https://superhero-application-form.freecodecamp.org'>
         <div className='section'>
           <label>
             Hero Name
@@ -155,8 +59,8 @@ export const SuperheroForm = () => {
             <option value=''>
               Select one
             </option>
-            {powerSourceOptions.map(source => (
-              <option key={source} value={source}>
+           {powerSourceOptions.map(source => (
+             <option key={source} value={source}>
                 {source}
               </option>
             ))}
@@ -177,6 +81,13 @@ export const SuperheroForm = () => {
             </label>
           ))}
         </label>
+        <button
+          className='submit-btn'
+          type='submit'
+          disabled={!{heroName, realName, powerSource} || powers==0 ? true : false }
+        >
+          Join the League
+        </button>
       </form>
     </div>
   )

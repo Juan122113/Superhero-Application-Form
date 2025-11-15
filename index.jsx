@@ -61,8 +61,39 @@ export const SuperheroForm = () => {
   //const {value, checked} = {e.target.current.value, e.target.current.checked];
   //const {value: checked} = {e.target.value: e.target.checked};
     
-    const {value, checked} = e.target;
-
+    //const {value, checked} = e.target;
+    
+    //const {value, checked} = (e.target);
+    //let value, checked, rest;
+    //const value, checked, rest;
+    //({value, checked} = e.target);
+    //return ({value, checked} = e.target;
+    //return {value, checked};
+    const value = e.target;
+    const checked = e.target;
+    //let value = e.target;
+    //let checked = e.target;
+    //return {value, checked};
+    //return [value, checked];
+    //setPowers[value, checked];
+    //setPowers([value, checked]);
+    //setPowers(value, checked);
+    //setPowers({value, checked});
+    //setPowers({value: checked});
+    //setPowers([{value: checked}]);
+    //return setPowers([{value: checked}]);
+    //return setPowers({value: checked});
+    //return setPowers({value, checked});
+    //return setPowers(value, checked);
+    //return setPowers([value, checked]);
+    //return setPowers[value, checked];
+    //return {value: value, checked: checked};
+    //setPowers(value: value, checked: checked);
+    //return setPowers([{value: value, checked: checked}]);
+    //return {value: checked};
+    //const {val, check} = e.target;
+    //let {value, checked} = e.target;
+    //const {value, checked} = e.target.current;
     //const {e.target.value, e.target.checked} = e.target;
     //let {value, checked} = e.target;
     //const { {value, checked} } = e.target;
